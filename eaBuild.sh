@@ -12,7 +12,11 @@ mkdir wcfsetup
 unzip wcf.zip -d wcfsetup
 rm wcf.zip
 cd wcfsetup
-tar -xvzf WCFSetup.tar.gz
+rm LICENSE
+rm README.md
+echo -n "Extracting WCFSetup.tar.gz ..."
+tar -xzf WCFSetup.tar.gz
+rm WCFSetup.tar.gz
 test -e ../../wcfsetup && cp -R ../../wcfsetup/* ./
 cp ../../$PACKAGE_NAME.tar install/packages/$PACKAGE_NAME.tar
 
