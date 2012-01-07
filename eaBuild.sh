@@ -14,7 +14,7 @@ rm wcf.zip
 cd wcfsetup
 rm LICENSE
 rm README.md
-echo -n "Extracting WCFSetup.tar.gz ..."
+echo "Extracting WCFSetup.tar.gz ..."
 tar -xzf WCFSetup.tar.gz
 rm WCFSetup.tar.gz
 test -e ../../wcfsetup && cp -R ../../wcfsetup/* ./
