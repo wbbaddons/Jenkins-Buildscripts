@@ -30,7 +30,12 @@ rm -rf wcfsetup
 cd ..
 
 echo "\nBuilding $ZIP_NAME.zip"
-echo "------------------------"
+echo -n "-------------"
+for i in `seq 1 ${#ZIP_NAME}`;
+do
+  	echo -n "-"
+done
+echo "\n"
 test -e COPYING && ADDITIONAL_FILES="$ADDITIONAL_FILES COPYING"
 test -e LICENSE && ADDITIONAL_FILES="$ADDITIONAL_FILES LICENSE"
 test -e README && ADDITIONAL_FILES="$ADDITIONAL_FILES README"
