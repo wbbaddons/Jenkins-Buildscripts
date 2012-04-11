@@ -15,7 +15,7 @@ for i in `seq 1 ${#PACKAGE_NAME}`;
 do
 		echo -n "-"
 done
-echo "\n"
+echo -n "\n"
 tar cvf $PACKAGE_NAME.tar * --exclude acptemplates --exclude files --exclude templates --exclude acptemplate --exclude file --exclude template
 
 test -e acptemplates.tar && rm acptemplates.tar
