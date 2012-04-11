@@ -35,7 +35,7 @@ for i in `seq 1 ${#ZIP_NAME}`;
 do
   	echo -n "-"
 done
-echo "\n"
+echo -n "\n"
 test -e COPYING && ADDITIONAL_FILES="$ADDITIONAL_FILES COPYING"
 test -e LICENSE && ADDITIONAL_FILES="$ADDITIONAL_FILES LICENSE"
 test -e README && ADDITIONAL_FILES="$ADDITIONAL_FILES README"
