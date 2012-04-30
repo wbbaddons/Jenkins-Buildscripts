@@ -15,5 +15,9 @@ $check = function ($folder) use (&$check) {
 		$check($file);
 	}
 };
+echo "
+Checking PHP for Syntax Errors
+------------------------------
+";
 if (file_exists('file')) $check('file');
 if (file_exists('files')) $check('files');
