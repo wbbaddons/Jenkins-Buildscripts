@@ -21,3 +21,7 @@ Checking PHP for Syntax Errors
 ";
 if (file_exists('file')) $check('file');
 if (file_exists('files')) $check('files');
+unset($argv[0]);
+foreach ($argv as $arg) {
+	if (file_exists($arg)) $check($arg);
+}
