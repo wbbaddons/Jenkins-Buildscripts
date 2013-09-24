@@ -16,7 +16,7 @@ do
 		echo -n "-"
 done
 echo -n "\n"
-tar cvf $PACKAGE_NAME.tar * --exclude acptemplates --exclude files --exclude templates --exclude acptemplate --exclude file --exclude template
+tar cvf $PACKAGE_NAME.tar * --exclude acptemplates --exclude files --exclude templates --exclude acptemplate --exclude file --exclude template --exclude test
 
 test -e acptemplates.tar && rm acptemplates.tar
 test -e files.tar && rm files.tar
