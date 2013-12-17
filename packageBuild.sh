@@ -2,10 +2,10 @@
 
 [ -z $PACKAGE_NAME ] && exit 1
 test -e acptemplates && echo "\nBuilding acptemplates.tar\n-------------------------" && cd acptemplates && tar cvf ../acptemplates.tar * && cd ..
-test -e files && echo "\nBuilding files.tar\n------------------" && cd files && tar cvf ../files.tar * && cd ..
+test -e files && echo "\nBuilding files.tar\n------------------" && cd files && tar cvf ../files.tar * --exclude '*.git*' && cd ..
 test -e templates && echo "\nBuilding templates.tar\n----------------------" && cd templates && tar cvf ../templates.tar * && cd ..
 test -e acptemplate && echo "\nBuilding acptemplate.tar\n-------------------------" && cd acptemplate && tar cvf ../acptemplate.tar * && cd ..
-test -e file && echo "\nBuilding file.tar\n------------------" && cd file && tar cvf ../file.tar * && cd ..
+test -e file && echo "\nBuilding file.tar\n------------------" && cd file && tar cvf ../file.tar * --exclude '*.git*' && cd ..
 test -e template && echo "\nBuilding template.tar\n----------------------" && cd template && tar cvf ../template.tar * && cd ..
 
 
